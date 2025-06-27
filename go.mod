@@ -1,3 +1,3 @@
-module bgo.fsx.go
+module github.com/boostgo/fsx
 
 go 1.23
