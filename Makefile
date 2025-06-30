@@ -5,6 +5,9 @@ APP_CMD_DIR=${CURRENT_DIR}/cmd
 last-tag: ## Get last git tag
 	git describe --tags
 
+codebase:
+	npx ai-digest
+
 # Run all linters
 lint:
 	@echo "Running golangci-lint..."
