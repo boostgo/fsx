@@ -37,6 +37,12 @@ var (
 	ErrCalculateSize              = errorx.New("fsx.directory.calculate_size")
 	ErrSourceNotDirectory         = errorx.New("fsx.directory.source_not_directory")
 	ErrDestinationExists          = errorx.New("fsx.directory.destination_exists")
+
+	ErrSearchFiles      = errorx.New("fsx.search.files")
+	ErrSearchContent    = errorx.New("fsx.search.content")
+	ErrInvalidPattern   = errorx.New("fsx.search.invalid_pattern")
+	ErrInvalidRegex     = errorx.New("fsx.search.invalid_regex")
+	ErrSearchDepthLimit = errorx.New("fsx.search.depth_limit")
 )
 
 type failedChangePermissionsContext struct {

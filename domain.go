@@ -21,3 +21,12 @@ type DirectoryInfo struct {
 	Mode      os.FileMode
 	ModTime   string
 }
+
+// SearchResult represents a search result
+type SearchResult struct {
+	Path       string
+	Info       os.FileInfo
+	MatchedBy  string // What caused the match (name, content, size, etc.)
+	LineNumber int    // For content searches
+	Line       string // For content searches
+}
