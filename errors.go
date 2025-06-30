@@ -30,6 +30,13 @@ var (
 	ErrChangeDirectoryPermissions = errorx.New("fsx.directory.change_permissions")
 	ErrDirectoryNotExist          = errorx.New("fsx.directory.not_exist")
 	ErrNotDirectory               = errorx.New("fsx.directory.not_directory")
+	ErrCopyDirectory              = errorx.New("fsx.directory.copy")
+	ErrSyncDirectory              = errorx.New("fsx.directory.sync")
+	ErrCompareDirectory           = errorx.New("fsx.directory.compare")
+	ErrWalkDirectory              = errorx.New("fsx.directory.walk")
+	ErrCalculateSize              = errorx.New("fsx.directory.calculate_size")
+	ErrSourceNotDirectory         = errorx.New("fsx.directory.source_not_directory")
+	ErrDestinationExists          = errorx.New("fsx.directory.destination_exists")
 )
 
 type failedChangePermissionsContext struct {
