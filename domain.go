@@ -1,6 +1,9 @@
 package fsx
 
-import "os"
+import (
+	"os"
+	"sync"
+)
 
 // DirectoryEntry represents a file or subdirectory in a directory
 type DirectoryEntry struct {
@@ -29,4 +32,12 @@ type SearchResult struct {
 	MatchedBy  string // What caused the match (name, content, size, etc.)
 	LineNumber int    // For content searches
 	Line       string // For content searches
+}
+
+// FileLock represents a file lock
+type FileLock struct {
+	path     string
+	file     *os.File
+	mu       sync.Mutex
+	isLocked bool
 }
